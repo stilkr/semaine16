@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+        <!-- Home -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 id="home">Projet audio</h1>
+                            <p class="intro-text">Subtitle...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!-- Videos -->
+     <%=render "pages/videos" %>
+    
+    <!-- Upcoming Gigs -->
+    <section id="gigs" class="content-section text-center">
+        
+           
+                    <h3 align="left">Upcoming Gigs</h3>
+                   
+                 <div class="table-responsive">
+  <table class="table table-hover">
+    <tbody>
+        
+      <tr>
+        <td>SEPT <strong>14</strong></td>
+        <td>Nashville, TN</td>
+        <td>The BlueBird Cafe</td>
+      </tr>
+      
+      <tr>
+        <td>SEPT <strong>16</strong></td>
+        <td>Seattle, WA</td>
+        <td>Tractor Tavern</td>
+      </tr>
+      
+      <tr>
+        <td>SEPT <strong>17</strong></td>
+        <td>Alexandria, VA</td>
+        <td>The Birchmere</td>
+      </tr>
+      
+      <tr>
+        <td>SEPT <strong>25</strong></td>
+        <td>Washington, DC</td>
+        <td>The Hamilton</td>
+      </tr>
+      
+      <tr>
+        <td>SEPT <strong>30</strong></td>
+        <td>Chipping Ongar, Essex</td>
+        <td>Zinc Arts Center</td>
+      </tr>
+
+        <tr id="hidethis">
+        <td>OCT <strong>1</strong></td>
+        <td>Paris, France</td>
+        <td>Gibus Club</td>
+      </tr>
+       
+       <tr id="hidethis2">
+        <td>OCT <strong>2</strong></td>
+        <td>La Châtre, France</td>
+        <td>MJCS</td>
+      </tr>
+    </tbody>   
+  </table>
+  
+       <h5 onClick="toggle();" id="allgigs">VIEW ALL GIGS</h5>
+    </div>
+    <hr>
+    </section>
+
+
+
+    <!-- Pré-footer -->
+
+        <div class="container">
+            <div class="row">
+                <div class ="col-lg-4 col-md-4 col-sm-12">      <h5>About Simplon</h5> <p>Version sans la gem devise ;)</p>         </div>
+                <div class ="col-lg-4 col-md-4 col-sm-12">       <h5>Vivienne's omitted line  </h5>   
+                <%=image_tag("album-03-300x300.jpg")%></div>
+                <div class ="col-lg-4 col-md-4 col-sm-12">      <h5 id="news">Recent posts</h5>
+                <h2>Derniers articles</h2>
+
+<% @articles.each do |un_article| %>
+<h4><a href="/articles/<%= un_article.id %>"><%= un_article.title %></h4></a>
+<% end %>
+                
+             <div class="row">
+                  <div class ="col-lg-11 col-md-11 col-sm-11">     <hr>
+                  </div>
+            </div>      
+        </div>
+             </body>
+             

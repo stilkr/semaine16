@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Obsidian On Rails</title>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+      
+        <!-- CSS -->
+      <link href="assets/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/pages.scss" rel="stylesheet">
+  
+       
+    </head>
+    
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+      <%= render "_partials/menu" %>
+      
+      <%= yield %>
+      
+      <!-- jQuery -->
+      <script src="assets/jquery.js"></script>
+      <script src="assets/jquery-1.6.1.min.js"></script>
+      <script src="assets/height.js"></script>
+      <script src="assets/smooth.js"></script>
+      <script src="assets/toggle.js"></script>
+    </body>
+    
+    <%= render "_partials/footer" %>
+  </html>
